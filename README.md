@@ -1,5 +1,6 @@
 # 📊 Telco Customer Churn Analysis using SQL, Pandas & Tableau
 
+![Dashboard Preview](images/churn_analysis.png)
 
 An end-to-end customer churn analysis project using **SQL**, **Python (Pandas)**, and **Tableau**. This project cleans and analyzes telecom customer data, cross-verifies every major finding using both SQL and Pandas, and presents business insights through an interactive Tableau dashboard.
 
