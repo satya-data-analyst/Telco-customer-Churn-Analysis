@@ -1,21 +1,17 @@
 # 📊 Telco Customer Churn Analysis using SQL, Pandas & Tableau
 
+An end-to-end customer churn analysis project using **PostgreSQL**, **Python (Pandas)** and **Tableau**.
 
-An end-to-end customer churn analysis project using **SQL**, **Python (Pandas)**, and **Tableau**. This project cleans and analyzes telecom customer data, cross-verifies every major finding using both SQL and Pandas, and presents business insights through an interactive Tableau dashboard.
-
-The analysis covers **7,043 telecom customers** and identifies the strongest factors associated with customer churn while providing business-focused recommendations to improve customer retention.
+The project analyzes **7,043 telecom customers** to identify the key factors associated with customer churn and provides business-focused recommendations for improving customer retention.
 
 ---
 
 # 🚀 Project Links
 
-📓 **Kaggle Notebook**
-
-https://www.kaggle.com/code/satyadata/telco-churn-analysis-using-sql-pandas
-
-📊 **Interactive Tableau Dashboard**
-
-https://public.tableau.com/app/profile/satya.p1432/viz/telco_customer_churn_analysis/Dashboard1#1
+| Resource | Link |
+|----------|------|
+| 📓 Kaggle Notebook | https://www.kaggle.com/code/satyadata/telco-churn-analysis-using-sql-pandas |
+| 📊 Tableau Dashboard | https://public.tableau.com/app/profile/satya.p1432/viz/telco_customer_churn_analysis/Dashboard1#1 |
 
 ---
 
@@ -23,106 +19,75 @@ https://public.tableau.com/app/profile/satya.p1432/viz/telco_customer_churn_anal
 
 This project answers the following business questions:
 
-- What is the overall customer churn rate?
-- Can SQL and Pandas produce identical analytical results?
-- Which contract type has the highest churn rate?
-- Does customer tenure influence churn?
-- Which internet service has the highest churn rate?
-- Do senior citizens churn more frequently?
-- Are higher monthly charges associated with higher churn?
-- Which customer profile has the highest observed churn risk?
-- What percentage of churned customers are on month-to-month contracts?
-- Identify the highest-risk customer segment using contract type, internet service, and tenure.
+- Overall churn rate
+- Contract type churn
+- Customer tenure
+- Internet service churn
+- Senior citizen churn
+- Monthly charges vs churn
+- Highest-risk customer profile
+- SQL vs Pandas validation
 
 ---
 
 # 📈 Key Findings
 
-### Overall Churn Rate
-
-- **27%** of customers churned.
-
-### Contract Type
-
-- Month-to-Month contracts: **43%**
-- One-Year contracts: **11%**
-- Two-Year contracts: **3%**
-
-### Customer Tenure
-
-- Customers with tenure under 12 months: **47%**
-- Customers with tenure above 12 months: **17%**
-
-### Internet Service
-
-- Fiber Optic: **42%**
-- DSL: **19%**
-- No Internet Service: **7%**
-
-### Senior Citizens
-
-- Senior Customers: **42%**
-- Non-Senior Customers: **24%**
-
-### Highest Observed Churn-Risk Segment
-
-Customers with:
-
-- Month-to-Month Contract
-- Fiber Optic Internet
-- Tenure under 12 months
-
-show a **70.20% churn rate**, making this the highest observed churn-risk segment identified in this analysis.
+| Metric | Result |
+|---------|-------:|
+| Overall Churn | 26.5% |
+| Month-to-Month Contract | 42.7% |
+| One-Year Contract | 11.3% |
+| Two-Year Contract | 2.8% |
+| Under 12 Months | 47.4% |
+| Over 12 Months | 17.1% |
+| Fiber Optic | 41.9% |
+| DSL | 19.0% |
+| No Internet | 7.4% |
+| Senior Citizens | 41.7% |
+| Non-Senior Citizens | 23.6% |
 
 ---
 
 # 💼 Business Recommendations
 
-- Encourage migration from Month-to-Month contracts to longer-term plans.
-- Improve customer onboarding during the first year.
-- Investigate Fiber Optic customer experience through surveys and root-cause analysis.
-- Develop targeted retention strategies for senior customers.
-- Monitor customers matching the highest-risk profile for proactive retention efforts.
+- Encourage customers to migrate to long-term contracts.
+- Improve onboarding during the first year.
+- Investigate Fiber Optic customer experience.
+- Build retention campaigns for senior customers.
+- Monitor high-risk customers proactively.
 
 ---
 
 # ✅ Cross Verification
 
-One of the core objectives of this project is to validate analytical accuracy.
+Every major analytical result is independently calculated using:
 
-Every major business metric is independently calculated using both:
-
-- SQL
+- PostgreSQL
 - Python (Pandas)
 
-The results are then compared to confirm consistency between both analytical approaches.
+The outputs are compared to verify analytical consistency.
 
 ---
 
 # 📊 Tableau Dashboard
 
-The interactive Tableau dashboard provides a visual summary of customer churn patterns, including:
+The Tableau dashboard summarizes:
 
 - Total Customers
 - Churned Customers
-- Overall Churn Rate
+- Churn Rate
 - Contract Type Analysis
 - Internet Service Analysis
 - Senior Citizen Analysis
 - Customer Tenure Analysis
 - Highest-Risk Customer Segment
 
-
-View Dashboard:
-
-https://public.tableau.com/app/profile/satya.p1432/viz/telco_customer_churn_analysis/Dashboard1#1
-
 ---
 
-# 🛠️ Technologies Used
+# 🛠 Technologies
 
-- SQL
 - PostgreSQL
+- SQL
 - Python
 - Pandas
 - NumPy
@@ -134,15 +99,15 @@ https://public.tableau.com/app/profile/satya.p1432/viz/telco_customer_churn_anal
 
 # 📂 Repository Structure
 
-```
-telco-customer-churn-analysis/
+```text
+Telco-Customer-Churn-Analysis/
 │
 ├── README.md
-├── telco_customer_churn_analysis.ipynb
 ├── telco_customer_churn.sql
+├── telco_customer_churn_analysis.ipynb
 ├── requirements.txt
-├── LICENSE
-└── images/
+├── images/
+└── LICENSE
 ```
 
 ---
@@ -152,32 +117,25 @@ telco-customer-churn-analysis/
 **Dataset:** Telco Customer Churn
 
 - Records: **7,043**
-- Source:
-  https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+- Source: https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
-> **Note:** The dataset belongs to the original authors and is **not included** in this repository. Please download it from Kaggle before running the notebook.
+> The dataset belongs to the original authors and is **not included** in this repository.
 
 ---
 
 # ▶️ How to Run
 
-### Clone the repository
-
 ```bash
-git clone https://github.com/satya-data-analyst/telco-customer-churn-analysis.git
+git clone https://github.com/satya-data-analyst/Telco-Customer-Churn-Analysis.git
 ```
-
-### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Download the dataset
+Download the dataset from Kaggle and place the CSV file in your project folder.
 
-Download the dataset from Kaggle and place the CSV file in your working directory.
-
-### Open the notebook
+Open:
 
 ```
 telco_customer_churn_analysis.ipynb
@@ -201,7 +159,7 @@ Run all notebook cells.
 
 # 👤 Author
 
-**Satya**
+**satya-data-analyst**
 
 Data Analytics Portfolio
 
