@@ -1,5 +1,6 @@
 # 📊 Telco Customer Churn Analysis using SQL, Pandas & Tableau
 
+
 An end-to-end customer churn analysis project using **SQL**, **Python (Pandas)**, and **Tableau**. This project cleans and analyzes telecom customer data, cross-verifies every major finding using both SQL and Pandas, and presents business insights through an interactive Tableau dashboard.
 
 The analysis covers **7,043 telecom customers** and identifies the strongest factors associated with customer churn while providing business-focused recommendations to improve customer retention.
@@ -102,12 +103,14 @@ The results are then compared to confirm consistency between both analytical app
 
 The interactive Tableau dashboard provides a visual summary of customer churn patterns, including:
 
-- Total Customer Count
-- Churtn Count
-- Customer Churn Rate
-- Internet service comparison
-- Monthly charge distribution
-- Senior citizen churn analysis
+- Total Customers
+- Churned Customers
+- Overall Churn Rate
+- Contract Type Analysis
+- Internet Service Analysis
+- Senior Citizen Analysis
+- Customer Tenure Analysis
+- Highest-Risk Customer Segment
 
 
 View Dashboard:
