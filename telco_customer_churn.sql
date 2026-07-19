@@ -1,11 +1,24 @@
+-- ====================================
+-- Create Raw Table
+-- ====================================
+
 create  table customer_raw(customerID text, gender text,SeniorCitizen text,	Partner text,
 Dependents text, tenure text, PhoneService text, MultipleLines text, InternetService text,
 OnlineSecurity text, OnlineBackup text, DeviceProtection text,TechSupport text,StreamingTV text,
 StreamingMovies text, Contract text, PaperlessBilling  text,PaymentMethod text, 
 MonthlyCharges text ,TotalCharges text, Churn text
 );
-copy customer_raw from 'C:/Program Files/PostgreSQL/New folder/archive (22)/Telco_Customer_Churn.csv'
+
+-- ====================================
+-- Import CSV
+-- ====================================
+
+copy customer_raw from '/path/to/Telco_Customer_Churn.csv' -- Replace the file path with your local CSV location.
 with (format csv,header true,encoding 'utf8');
+
+-- ====================================
+-- Create Clean Table
+-- ====================================
 
 create table customer_clean(customerID varchar(50), gender varchar(10),SeniorCitizen int,
 Partner varchar(10),Dependents varchar(10), tenure int, PhoneService varchar(10), 
@@ -15,7 +28,10 @@ StreamingTV varchar(20),StreamingMovies varchar(20), Contract varchar(20),
 PaperlessBilling varchar(10),PaymentMethod varchar(30), MonthlyCharges numeric, 
 TotalCharges numeric, Churn varchar(10));
 
-drop table customer_clean;
+
+-- ====================================
+-- Clean and Load Data
+-- ====================================
 
 insert into customer_clean(customerID,gender,SeniorCitizen,Partner,Dependents, 
 tenure,PhoneService,MultipleLines,InternetService,OnlineSecurity,OnlineBackup,
@@ -39,6 +55,8 @@ coalesce(nullif(trim(TotalCharges),'')::numeric,0),
 trim(Churn)
 from customer_raw;
 
-
+-- Verify
+SELECT COUNT(*)
+FROM customer_clean;
 
 
