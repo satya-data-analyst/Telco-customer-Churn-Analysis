@@ -13,7 +13,9 @@ MonthlyCharges text ,TotalCharges text, Churn text
 -- Import CSV
 -- ====================================
 
-copy customer_raw from '/path/to/Telco_Customer_Churn.csv' -- Replace the file path with your local CSV location.
+-- Replace '/path/to/Telco_Customer_Churn.csv' with your actual file path
+-- Dataset available at: https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+copy customer_raw from '/path/to/Telco_Customer_Churn.csv' 
 with (format csv,header true,encoding 'utf8');
 
 -- ====================================
@@ -50,7 +52,9 @@ trim(MultipleLines),
 trim(InternetService),trim(OnlineSecurity),trim(OnlineBackup),trim(DeviceProtection),
 trim(TechSupport),trim(StreamingTV),trim(StreamingMovies),trim(Contract),trim(PaperlessBilling),
 trim(PaymentMethod),
-coalesce(nullif(trim(MonthlyCharges),'')::numeric,0),
+coalesce(nullif(trim(MonthlyCharges),'')::numeric,0), 
+-- TotalCharges contains blank strings for new customers (tenure=0)
+-- COALESCE converts these to 0 rather than dropping the rows
 coalesce(nullif(trim(TotalCharges),'')::numeric,0),
 trim(Churn)
 from customer_raw;
