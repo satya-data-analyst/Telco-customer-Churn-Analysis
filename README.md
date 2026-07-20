@@ -45,6 +45,10 @@ This project answers the following business questions:
 | No Internet | 7.4% |
 | Senior Citizens | 41.7% |
 | Non-Senior Citizens | 23.6% |
+| High-tier Monthly Charges | 34.0% churn |
+| Month-to-Month + Fiber Optic | 55.0% churn |
+| 88.55% of churned = Month-to-Month | Dominant driver confirmed |
+| **High-risk cohort** (M2M + Fiber + ≤12mo) | **70.20%** churn |
 
 ---
 
